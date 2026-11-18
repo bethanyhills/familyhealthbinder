@@ -1,0 +1,108 @@
+/* Family Health Binder website styles.
+   To restyle the whole site, change the colors and fonts in :root below. */
+:root {
+  --brand: #2f6f73;        /* main accent: buttons, links, icons */
+  --brand-dark: #1f4f52;   /* hover state */
+  --brand-soft: #e6f1f1;   /* light accent backgrounds */
+  --text: #1d2327;
+  --muted: #5b6770;
+  --bg: #ffffff;
+  --bg-alt: #f6f8f8;
+  --border: #dde4e5;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius: 14px;
+  --max: 1040px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #7cc4c8;
+    --brand-dark: #a3d8db;
+    --brand-soft: #1c3133;
+    --text: #e8ecee;
+    --muted: #a3afb6;
+    --bg: #111618;
+    --bg-alt: #182022;
+    --border: #2a3437;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; font-size: 17px; }
+a { color: var(--brand); }
+a:hover { color: var(--brand-dark); }
+img { max-width: 100%; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 720px; }
+
+/* Header */
+.site-header { border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 10; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; font-size: 18px; }
+.logo-mark { width: 34px; height: 34px; border-radius: 9px; background: var(--brand); color: var(--bg); display: grid; place-items: center; font-size: 18px; }
+.site-nav { display: flex; gap: 20px; font-size: 15px; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--text); }
+
+/* Hero */
+.hero { padding: 72px 0 56px; text-align: center; }
+.eyebrow { color: var(--brand); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; margin: 0 0 12px; }
+h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; margin: 0 0 18px; letter-spacing: -0.02em; }
+.lead { font-size: clamp(18px, 2.4vw, 21px); color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+.button { display: inline-block; background: var(--brand); color: var(--bg); padding: 13px 24px; border-radius: 999px; font-weight: 600; text-decoration: none; }
+.button:hover { background: var(--brand-dark); color: var(--bg); }
+.button.secondary { background: transparent; color: var(--brand); border: 1.5px solid var(--brand); }
+.note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+
+/* Sections */
+section { padding: 56px 0; }
+section.alt { background: var(--bg-alt); }
+h2 { font-size: clamp(26px, 4vw, 34px); line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
+h3 { font-size: 19px; margin: 0 0 6px; }
+.section-intro { color: var(--muted); max-width: 640px; margin: 0 0 32px; }
+.center { text-align: center; }
+.center .section-intro { margin-left: auto; margin-right: auto; }
+
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
+.card p { margin: 0; color: var(--muted); }
+.icon { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; margin-bottom: 14px; }
+.icon svg { width: 22px; height: 22px; }
+
+.checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.checks li { padding-left: 32px; position: relative; }
+.checks li::before { content: ""; position: absolute; left: 0; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--brand-soft); }
+.checks li::after { content: ""; position: absolute; left: 7px; top: 8px; width: 5px; height: 9px; border: solid var(--brand); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+
+.split { display: grid; gap: 40px; grid-template-columns: 1fr 1fr; align-items: center; }
+@media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
+
+.card .price { color: var(--text); }
+.price { font-size: 44px; font-weight: 700; margin: 0; }
+.price small { font-size: 17px; color: var(--muted); font-weight: 400; }
+
+/* Steps */
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.steps li { counter-increment: step; }
+.steps li::before { content: counter(step); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--brand); color: var(--bg); font-weight: 700; margin-bottom: 10px; }
+.steps p { margin: 0; color: var(--muted); }
+
+/* Text pages (privacy, support) */
+.page { padding: 48px 0 72px; }
+.page h1 { font-size: clamp(30px, 5vw, 42px); }
+.page h2 { font-size: 24px; margin-top: 40px; }
+.page .updated { color: var(--muted); margin-top: -8px; }
+.callout { background: var(--brand-soft); border-radius: var(--radius); padding: 20px 22px; margin: 24px 0; }
+.callout p:last-child { margin-bottom: 0; }
+.callout p:first-child { margin-top: 0; }
+details { border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 10px 0; background: var(--bg); }
+details[open] { padding-bottom: 4px; }
+summary { cursor: pointer; font-weight: 600; }
+details p, details ol, details ul { color: var(--muted); }
+.path { font-weight: 600; color: var(--text); white-space: nowrap; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); padding: 32px 0 40px; color: var(--muted); font-size: 14px; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+.site-footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.site-footer a { color: var(--muted); }
