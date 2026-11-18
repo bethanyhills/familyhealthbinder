@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="./"><span class="logo-mark" aria-hidden="true">+</span>Family Health Binder</a>
+      <a class="logo" href="./"><img class="logo-mark" src="favicon.svg" alt="" width="34" height="34">Family Health Binder</a>
       <nav class="site-nav" aria-label="Main">
         <a href="./" aria-current="page">Home</a>
         <a href="support.html">Support</a>
@@ -24,64 +24,175 @@
 
   <main>
     <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">For iPhone</p>
-        <h1>Every new doctor's form,<br>filled out in minutes.</h1>
-        <p class="lead">Family Health Binder keeps your whole family's medical records in one place on your iPhone, so you stop logging into five patient portals every time a clipboard is handed to you.</p>
-        <!-- When the app is live, replace "#" with the App Store link and change the text to "Download on the App Store". -->
-        <a class="button" href="#">Coming soon to the App Store</a>
-        <p class="note">Free to try for 14 days. One-time unlock after that. No subscription.</p>
+      <div class="wrap hero-split">
+        <div>
+          <p class="eyebrow">For iPhone</p>
+          <h1>Your family's health records in one place: your phone.</h1>
+          <p class="hero-sub">New doctors' forms filled out in minutes.</p>
+          <p class="lead">Medications, allergies, shots, insurance and the paperwork from every visit, for everyone in your family, ready whenever someone hands you a clipboard.</p>
+          <!-- When the app is live, replace "#" with the App Store link and change the text to "Download on the App Store". -->
+          <a class="button" href="#">Coming soon to the App Store</a>
+          <p class="note">Free to try for 14 days. One-time unlock after that. No subscription.</p>
+        </div>
+        <div class="demo demo-family" aria-hidden="true">
+          <div class="phone"><div class="screen"><div class="band"><div class="statusbar"><span>9:41</span><span>&#9679;&#9679;&#9679; &#9646;</span></div><div class="island"></div>
+            <div class="nav"><h4>Rivera Family</h4><div class="band-sub">4 people</div></div></div>
+            <div class="group">
+              <div class="row person"><span class="avatar a1">JR</span><div class="grow"><div class="v">Jordan Rivera</div><div class="k">41 · 3 medications</div></div><span class="chev">›</span></div>
+              <div class="row person"><span class="avatar a2">SR</span><div class="grow"><div class="v">Sam Rivera</div><div class="k">39 · Allergy: sulfa</div></div><span class="chev">›</span></div>
+              <div class="row person"><span class="avatar a3">ER</span><div class="grow"><div class="v">Emma Rivera</div><div class="k">8 · 504 plan</div></div><span class="chev">›</span></div>
+              <div class="row person"><span class="avatar a4">LR</span><div class="grow"><div class="v">Leo Rivera</div><div class="k">5 · Allergy: peanuts</div></div><span class="chev">›</span></div>
+            </div>
+            <div class="tiles">
+              <p class="group-label">Emma at a glance</p>
+              <div class="tile-grid">
+                <div class="tile"><b>2</b><span>Medications</span></div>
+                <div class="tile"><b>1</b><span>Allergy</span></div>
+                <div class="tile"><b>14</b><span>Immunizations</span></div>
+                <div class="tile"><b>9</b><span>Documents</span></div>
+                <div class="tile"><b>3</b><span>Providers</span></div>
+                <div class="tile"><b>2</b><span>Therapies</span></div>
+              </div>
+            </div>
+          </div></div>
+        </div>
       </div>
     </section>
 
     <section class="alt">
-      <div class="wrap">
-        <h2>Everything an intake form asks for</h2>
-        <p class="section-intro">Add each person once. Then every form, for every new doctor, therapist or school, comes from the same place.</p>
-        <div class="grid">
-          <div class="card">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.2c2.6.3 4.5 2.4 4.5 5.3"/></svg></div>
-            <h3>The whole family</h3>
-            <p>A profile for each person: medications, allergies, conditions, surgeries, immunizations, family history, therapies and more.</p>
+      <div class="wrap benefit">
+        <div class="benefit-text">
+          <p class="eyebrow">All in one place</p>
+          <h2>Everyone's health info and documents, on your phone.</h2>
+          <p>No more logging into five patient portals or digging through a folder of papers. Each person gets a profile with everything a doctor asks about, and the papers that go with it.</p>
+          <ul class="checks">
+            <li>Medications, allergies, conditions, surgeries, shots and family history</li>
+            <li>Doctors, pharmacies, insurance and emergency contacts, entered once and shared across the family</li>
+            <li>Scanned documents, visit notes, therapies and school 504 or IEP plans</li>
+          </ul>
+        </div>
+        <div class="demo demo-search" aria-hidden="true">
+          <div class="phone"><div class="screen"><div class="statusbar"><span>9:41</span><span>&#9679;&#9679;&#9679; &#9646;</span></div><div class="island"></div>
+            <div class="nav"><h4>Search</h4></div>
+            <div class="searchbar"><span>&#9906;</span><span id="typed"></span><span class="caret"></span></div>
+            <div class="results" id="results">
+              <p class="group-label">Allergies</p>
+              <div class="group">
+                <div class="row"><span class="avatar a2">SR</span><div class="grow"><div class="v">Sulfa drugs</div><div class="k">Sam · rash</div></div></div>
+                <div class="row"><span class="avatar a3">ER</span><div class="grow"><div class="v">Penicillin</div><div class="k">Emma · hives</div></div></div>
+                <div class="row"><span class="avatar a4">LR</span><div class="grow"><div class="v">Peanuts</div><div class="k">Leo · carries EpiPen</div></div></div>
+              </div>
+              <p class="group-label">Documents</p>
+              <div class="group">
+                <div class="row"><span class="avatar a4">LR</span><div class="grow"><div class="v">Allergy action plan</div><div class="k">Leo · Sep 2026</div></div><span class="pill">PDF</span></div>
+              </div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap benefit flip">
+        <div class="benefit-text">
+          <p class="eyebrow">Forms are a breeze</p>
+          <h2>New doctor? The intake form takes minutes.</h2>
+          <p>Every profile has an intake summary laid out in the order forms ask. Copy any detail with a long press, or hand the office a PDF.</p>
+          <ul class="checks">
+            <li>Birth date, insurance IDs, medications with doses, allergies and past surgeries in one screen</li>
+            <li>Works for doctors, dentists, therapists, camps and school health forms</li>
+            <li>Share a PDF summary straight to a patient portal or email</li>
+          </ul>
+        </div>
+        <div class="demo demo-intake" aria-hidden="true">
+          <div class="phone"><div class="screen"><div class="statusbar"><span>9:41</span><span>&#9679;&#9679;&#9679; &#9646;</span></div><div class="island"></div>
+            <div class="nav"><span class="back">‹ Emma</span><h5>Intake summary</h5></div>
+            <p class="group-label">Patient</p>
+            <div class="group">
+              <div class="row r1"><div class="grow"><div class="k">Date of birth</div><div class="v">04/12/2018</div></div></div>
+              <div class="row"><div class="grow"><div class="k">Height · Weight</div><div class="v">4 ft 2 in · 58 lb</div></div></div>
+            </div>
+            <p class="group-label">Allergies</p>
+            <div class="group">
+              <div class="row r2"><div class="grow"><div class="v">Penicillin</div><div class="k">Hives</div></div></div>
+            </div>
+            <p class="group-label">Medications</p>
+            <div class="group">
+              <div class="row r3"><div class="grow"><div class="v">Cetirizine 5 mg</div><div class="k">Once daily</div></div></div>
+              <div class="row"><div class="grow"><div class="v">Fluticasone spray</div><div class="k">1 spray each nostril daily</div></div></div>
+            </div>
+            <p class="group-label">Insurance</p>
+            <div class="group">
+              <div class="row"><div class="grow"><div class="v">Blue Cross PPO</div><div class="k">Member ID XKR 448 120 337</div></div></div>
+            </div>
+            <div class="copied">Copied</div>
+          </div></div>
+          <div class="paper">
+            <h6>New Patient Intake</h6>
+            <div class="field">Date of birth<div class="line"><span class="fill f1">04/12/2018</span></div></div>
+            <div class="field">Allergies<div class="line"><span class="fill f2">Penicillin (hives)</span></div></div>
+            <div class="field">Current medications<div class="line"><span class="fill f3">Cetirizine 5 mg daily</span></div></div>
+            <div class="field">Insurance<div class="line done-line"></div></div>
           </div>
-          <div class="card">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6l1 2h3v14H5V6h3z"/><path d="M9 11h6M9 15h4"/></svg></div>
-            <h3>Intake summary</h3>
-            <p>One screen per person, in the order intake forms ask. Copy any detail with a long press, or share it all as a PDF.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M8 10h8M8 14h5"/></svg></div>
-            <h3>Scan paper records</h3>
-            <p>Scan prescription labels, visit summaries, vaccine records, insurance cards and 504 or IEP plans. The app reads them on your phone and fills in the details for you to check.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div>
-            <h3>Your care team, entered once</h3>
-            <p>Doctors, pharmacies, insurance, emergency contacts and schools are shared across profiles, so you never type the same pediatrician twice.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/></svg></div>
-            <h3>Documents and visit notes</h3>
-            <p>Keep the original scans with each record, jot notes after appointments, and search across the whole family.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></div>
-            <h3>School, too</h3>
-            <p>School and grade, plus 504 and IEP plan details, ready for school health forms and new providers.</p>
-          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap benefit">
+        <div class="benefit-text">
+          <p class="eyebrow">No more carrying papers</p>
+          <h2>Snap a photo. The details fill themselves in.</h2>
+          <p>Scan a prescription label, visit summary, vaccine record, insurance card or school plan right from the section it belongs in. The app reads it on your phone, shows you what it found, and saves it with the original scan.</p>
+          <ul class="checks">
+            <li>Nothing to type, and you check every detail before it's saved</li>
+            <li>Read on your iPhone, never uploaded</li>
+            <li>Warns you if the name on the paper doesn't match the person</li>
+          </ul>
+        </div>
+        <div class="demo demo-scan" aria-hidden="true">
+          <div class="phone"><div class="screen"><div class="statusbar"><span>9:41</span><span>&#9679;&#9679;&#9679; &#9646;</span></div><div class="island"></div>
+            <div class="nav"><span class="back">‹ Emma</span><h5>Prescription found</h5></div>
+            <p class="group-label found-head">Check and save</p>
+            <div class="group found">
+              <div class="row"><div class="grow"><div class="k">Medication</div><div class="v">Amoxicillin 400 mg/5 mL</div></div></div>
+              <div class="row"><div class="grow"><div class="k">Directions</div><div class="v">5 mL by mouth twice daily</div></div></div>
+              <div class="row"><div class="grow"><div class="k">Prescriber</div><div class="v">Dr. Anita Patel</div></div></div>
+              <div class="row"><div class="grow"><div class="k">Pharmacy</div><div class="v">Main Street Pharmacy</div></div></div>
+              <div class="row"><div class="grow"><div class="k">Filled</div><div class="v">11/14/2026 · 0 refills</div></div></div>
+            </div>
+            <div class="camera">
+              <div class="cam-hint">Hold the label flat</div>
+              <div class="label">
+                <div class="store"><span>MAIN STREET PHARMACY</span><span>Rx 4471209</span></div>
+                <strong>EMMA RIVERA</strong><br>
+                AMOXICILLIN 400MG/5ML SUSP<br>
+                TAKE 5 ML BY MOUTH TWICE<br>DAILY FOR 10 DAYS<br>
+                DR. ANITA PATEL<br>
+                QTY 100 ML &nbsp; REFILLS 0<br>
+                FILLED 11/14/2026
+                <div class="scanline"></div>
+              </div>
+              <div class="frame"></div>
+              <div class="shutter"></div>
+            </div>
+            <div class="toast">&#10003; Saved to Emma's medications</div>
+          </div></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="wrap">
-        <h2 class="center">How it works</h2>
-        <p class="section-intro center">Set it up once on a quiet evening. It pays off at every appointment after that.</p>
-        <ol class="steps">
-          <li><h3>Add your family</h3><p>Create a profile for each person with the basics: birthday, height, weight and insurance.</p></li>
-          <li><h3>Fill in the records</h3><p>Type them in, pick from lists, or scan the paperwork you already have.</p></li>
-          <li><h3>Open it at the front desk</h3><p>Pull up the intake summary and copy what the form asks for, or hand over a PDF.</p></li>
-        </ol>
+        <p class="eyebrow">Where and when you need it</p>
+        <h2>The right information, right when you need it.</h2>
+        <p class="section-intro">At the front desk, the pharmacy counter, the school nurse's office or an urgent care at 10 PM.</p>
+        <div class="mini-grid">
+          <div><h3>Search the whole family</h3><p>Find every allergy, a doctor's phone number or last year's lab results in seconds.</p></div>
+          <div><h3>Works without signal</h3><p>Everything is on your phone, so it works in the basement waiting room too.</p></div>
+          <div><h3>Share with another parent</h3><p>Send a family member's records to a partner or caregiver as an encrypted file.</p></div>
+          <div><h3>Visit notes</h3><p>Jot down what the doctor said before you forget, right in the profile.</p></div>
+        </div>
       </div>
     </section>
 
@@ -98,7 +209,6 @@
           <li>Face ID or passcode every time the app opens</li>
           <li>No account, ads, analytics or tracking. The App Store label reads "Data Not Collected"</li>
           <li>Password-protected backup files you keep wherever you like</li>
-          <li>Share a family member's records with another parent's iPhone using an encrypted file</li>
         </ul>
       </div>
     </section>
@@ -121,6 +231,7 @@
         </div>
       </div>
     </section>
+    <p class="note center" style="padding:0 20px 24px">App screens shown are illustrations with a made-up family.</p>
   </main>
 
   <footer class="site-footer">
@@ -134,5 +245,22 @@
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Search demo: types "allerg", shows results, then starts over.
+    (function () {
+      var el = document.getElementById('typed'), res = document.getElementById('results');
+      if (!el) return;
+      var word = 'allerg', reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { el.textContent = word; return; }
+      function run() {
+        var i = 0; el.textContent = ''; res.classList.add('hidden');
+        var t = setInterval(function () {
+          el.textContent = word.slice(0, ++i);
+          if (i >= word.length) { clearInterval(t); setTimeout(function () { res.classList.remove('hidden'); }, 300); setTimeout(run, 6500); }
+        }, 180);
+      }
+      run();
+    })();
+  </script>
 </body>
 </html>
