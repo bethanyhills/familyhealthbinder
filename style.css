@@ -1,15 +1,15 @@
 /* Family Health Binder website styles.
    To restyle the whole site, change the colors and fonts in :root below. */
 :root {
-  --brand: #1f3a5f;        /* Binder Navy: buttons, links, icons */
-  --brand-dark: #142844;   /* hover state */
-  --brand-soft: #e6edf6;   /* light accent backgrounds */
-  --accent: #e8a33d;       /* amber: highlights, never small text on white */
-  --accent-text: #c9821e;  /* amber when used as text */
+  --brand: #2b3f75;        /* Navy: buttons, links, icons */
+  --brand-dark: #1f2b5b;   /* hover state */
+  --brand-soft: #e4eaf7;   /* light accent backgrounds */
+  --accent: #eb473b;       /* logo red: small marks only */
+  --accent-text: #b3261e;  /* red when used as text */
   --text: #16202e;
   --muted: #6b7686;
   --bg: #ffffff;
-  --bg-alt: #f3f5f9;
+  --bg-alt: #f4f6fb;
   --border: #e1e5ec;
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --radius: 14px;
@@ -17,16 +17,16 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --brand: #8db4e8;
-    --brand-dark: #b4cff2;
-    --brand-soft: #1d2d45;
-    --accent: #f2c271;
-    --accent-text: #f2c271;
+    --brand: #77a8f3;
+    --brand-dark: #a9c8f5;
+    --brand-soft: #1e2c55;
+    --accent: #f0685d;
+    --accent-text: #ff8a80;
     --text: #e6ebf2;
     --muted: #93a0b2;
-    --bg: #0d131c;
-    --bg-alt: #121b28;
-    --border: #223047;
+    --bg: #070a1f;
+    --bg-alt: #0e1330;
+    --border: #232a4a;
   }
 }
 
@@ -137,7 +137,7 @@ details p, details ol, details ul { color: var(--muted); }
 
 /* ---------- Phone mockup (illustrations, not screenshots) ----------
    The app screens inside always use light iOS colors, like a real screenshot. */
-.phone { --ios-bg: #f3f5f9; --ios-card: #fff; --ios-text: #16202e; --ios-muted: #6b7686; --ios-line: #e1e5ec; --ios-blue: #1f3a5f; --ios-green: #2e9d5b;
+.phone { --ios-bg: #f4f6fb; --ios-card: #fff; --ios-text: #16202e; --ios-muted: #6b7686; --ios-line: #e1e5ec; --ios-blue: #2b3f75; --ios-green: #2e9d5b;
   width: 270px; aspect-ratio: 9 / 19.2; background: #1b1f22; border-radius: 44px; padding: 11px; box-shadow: 0 30px 60px -20px rgba(15, 25, 50, .35), 0 0 0 1px rgba(0,0,0,.06);
   flex: none; position: relative; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; }
 .screen { position: relative; height: 100%; border-radius: 34px; overflow: hidden; background: var(--ios-bg); color: var(--ios-text); font-size: 12.5px; line-height: 1.35; }
@@ -156,8 +156,8 @@ details p, details ol, details ul { color: var(--muted); }
 .row .v { font-weight: 500; }
 .row .chev { color: #c4c4c7; font-size: 15px; }
 .avatar { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-weight: 600; font-size: 13px; flex: none; }
-.a1 { background: #dce6f3; color: #1f3a5f; } .a2 { background: #fbecd2; color: #8a5a10; } .a3 { background: #ddefe8; color: #22664f; } .a4 { background: #f1e3f2; color: #7a3d82; }
-.pill { font-size: 10px; background: #fbecd2; color: #8a5a10; padding: 2px 7px; border-radius: 10px; white-space: nowrap; }
+.a1 { background: #dce6f8; color: #2b3f75; } .a2 { background: #fce1de; color: #b0322a; } .a3 { background: #ddefe8; color: #22664f; } .a4 { background: #ede4f7; color: #5b3e8f; }
+.pill { font-size: 10px; background: #fce1de; color: #b0322a; padding: 2px 7px; border-radius: 10px; white-space: nowrap; }
 .toast { position: absolute; left: 14px; right: 14px; bottom: 22px; background: var(--ios-green); color: #fff; border-radius: 12px; padding: 10px 12px; font-weight: 600; font-size: 12px; display: flex; gap: 8px; align-items: center; box-shadow: 0 8px 20px rgba(0,0,0,.18); }
 .copied { position: absolute; left: 50%; transform: translateX(-50%); background: rgba(30,30,30,.88); color: #fff; padding: 6px 12px; border-radius: 16px; font-size: 11px; font-weight: 600; }
 
@@ -178,7 +178,7 @@ details p, details ol, details ul { color: var(--muted); }
 .demo-intake .r1 { animation: hl 12s infinite; }
 .demo-intake .r2 { animation: hl 12s 3s infinite; }
 .demo-intake .r3 { animation: hl 12s 6s infinite; }
-@keyframes hl { 0%, 4% { background: transparent; } 6%, 18% { background: #e3eaf4; } 22%, 100% { background: transparent; } }
+@keyframes hl { 0%, 4% { background: transparent; } 6%, 18% { background: #e4eaf7; } 22%, 100% { background: transparent; } }
 .demo-intake .copied { top: 46%; opacity: 0; animation: pop 3s infinite; }
 @keyframes pop { 0%, 8% { opacity: 0; } 14%, 50% { opacity: 1; } 60%, 100% { opacity: 0; } }
 .paper { width: 260px; background: #fffef9; color: #222; border-radius: 6px; padding: 18px 18px 14px; box-shadow: 0 18px 40px -16px rgba(0,0,0,.35); font-family: Georgia, "Times New Roman", serif; transform: rotate(1.5deg); flex: none; position: relative; }
@@ -233,15 +233,15 @@ details p, details ol, details ul { color: var(--muted); }
 }
 
 /* Family screen header band, as in the app */
-.band { background: #1f3a5f; color: #fff; padding-bottom: 14px; margin-bottom: 12px; }
+.band { background: #2b3f75; color: #fff; padding-bottom: 14px; margin-bottom: 12px; }
 .band .statusbar { color: #fff; }
 .band h4 { color: #fff; }
 .band .nav { padding-bottom: 0; }
 .band-sub { color: #c9d6e8; font-size: 11px; margin-top: 2px; }
 .tile b { color: var(--ios-blue); }
-.checks li::before { background: #fbecd2; }
-.checks li::after { border-color: #c9821e; }
-@media (prefers-color-scheme: dark) { .checks li::before { background: #3d2f17; } .checks li::after { border-color: #f2c271; } }
+.checks li::before { background: #e4eaf7; }
+.checks li::after { border-color: #2b3f75; }
+@media (prefers-color-scheme: dark) { .checks li::before { background: #1e2c55; } .checks li::after { border-color: #77a8f3; } }
 
 /* Intake demo: the paper form overlaps the phone */
 .demo-intake { flex-wrap: nowrap; gap: 0; align-items: flex-end; }
@@ -258,9 +258,9 @@ details p, details ol, details ul { color: var(--muted); }
 .demo-intake .r1 { animation: hl1 12s infinite; }
 .demo-intake .r2 { animation: hl2 12s infinite; }
 .demo-intake .r3 { animation: hl3 12s infinite; }
-@keyframes hl1 { 0%, 4% { background: transparent; } 6%, 18% { background: #e3eaf4; } 21%, 100% { background: transparent; } }
-@keyframes hl2 { 0%, 29% { background: transparent; } 31%, 43% { background: #e3eaf4; } 46%, 100% { background: transparent; } }
-@keyframes hl3 { 0%, 54% { background: transparent; } 56%, 68% { background: #e3eaf4; } 71%, 100% { background: transparent; } }
+@keyframes hl1 { 0%, 4% { background: transparent; } 6%, 18% { background: #e4eaf7; } 21%, 100% { background: transparent; } }
+@keyframes hl2 { 0%, 29% { background: transparent; } 31%, 43% { background: #e4eaf7; } 46%, 100% { background: transparent; } }
+@keyframes hl3 { 0%, 54% { background: transparent; } 56%, 68% { background: #e4eaf7; } 71%, 100% { background: transparent; } }
 .demo-intake .copied { animation: copied 12s infinite; }
 @keyframes copied {
   0%, 7% { opacity: 0; top: 30%; } 8%, 16% { opacity: 1; top: 30%; } 17%, 32% { opacity: 0; top: 30%; }
@@ -272,3 +272,5 @@ details p, details ol, details ul { color: var(--muted); }
 @keyframes w1 { 0%, 10% { clip-path: inset(0 100% 0 0); opacity: 1; } 18%, 92% { clip-path: inset(0 0 0 0); opacity: 1; } 97%, 100% { clip-path: inset(0 0 0 0); opacity: 0; } }
 @keyframes w2 { 0%, 35% { clip-path: inset(0 100% 0 0); opacity: 1; } 43%, 92% { clip-path: inset(0 0 0 0); opacity: 1; } 97%, 100% { clip-path: inset(0 0 0 0); opacity: 0; } }
 @keyframes w3 { 0%, 60% { clip-path: inset(0 100% 0 0); opacity: 1; } 68%, 92% { clip-path: inset(0 0 0 0); opacity: 1; } 97%, 100% { clip-path: inset(0 0 0 0); opacity: 0; } }
+.results { transition: opacity .4s; }
+.results.hidden { opacity: 0; }
